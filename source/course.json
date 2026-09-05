@@ -1,0 +1,588 @@
+{
+  "slug": "tactics",
+  "title": "Tactics, Made Visible",
+  "subtitle": "Sixteen fully explained tactical ideas with the moves already shown.",
+  "color": "#435c93",
+  "audience": "For players who want to understand tactical mechanisms before solving puzzles.",
+  "lessons": [
+    {
+      "title": "A knight fork creates two threats at once",
+      "lead": "Checking the king can make the second attack difficult to answer.",
+      "read": "White’s knight can jump from e5 to f7. From f7 it attacks h8, occupied by the king, and d8, occupied by the queen. The knight is not moving toward two squares at different times; both attacks exist immediately after it lands.",
+      "explain": "The check explains the timing. Black must answer it before making an ordinary queen-saving move. The queen on d8 is a particularly vulnerable fork target because it cannot capture the knight on f7. The final diagram makes the material change visible: the knight survives, and the queen is gone.",
+      "caution": "Not every apparent fork wins material. One target may capture the knight, a checking move may remove the danger, or the forking knight may be pinned. Confirm the landing square and the opponent’s legal responses instead of relying only on the fork’s familiar shape.",
+      "remember": "Find a landing square from which one piece attacks two valuable targets.",
+      "number": 1,
+      "filename": "01-a-knight-fork-creates-two-threats-at-once.html",
+      "fen": "3q3k/6p1/8/4N3/8/8/8/K7 w - - 0 1",
+      "steps": [
+        {
+          "san": "Nf7+",
+          "uci": "e5f7",
+          "note": "The knight checks the king and attacks the queen.",
+          "side": "w",
+          "moveNumber": 1,
+          "fen": "3q3k/5Np1/8/8/8/8/8/K7 b - - 1 1"
+        },
+        {
+          "san": "Kh7",
+          "uci": "h8h7",
+          "note": "In this continuation, Black moves the king out of check.",
+          "side": "b",
+          "moveNumber": 1,
+          "fen": "3q4/5Npk/8/8/8/8/8/K7 w - - 2 2"
+        },
+        {
+          "san": "Nxd8",
+          "uci": "f7d8",
+          "note": "White captures the queen on the next move.",
+          "side": "w",
+          "moveNumber": 2,
+          "fen": "3N4/6pk/8/8/8/8/8/K7 b - - 0 2"
+        }
+      ],
+      "finalFen": "3N4/6pk/8/8/8/8/8/K7 b - - 0 2",
+      "checkmate": false,
+      "stalemate": false,
+      "wordCount": 192
+    },
+    {
+      "title": "A pawn can fork two pieces",
+      "lead": "A small pawn can make a large piece move.",
+      "read": "The White e4 pawn can advance to e5. A White pawn on e5 attacks d6 and f6, where Black’s knight and bishop stand. White’s d4 pawn supports e5, making a simple capture of the forking pawn costly.",
+      "explain": "The fork comes from pawn attacks, not pawn movement. The pawn moves straight to e5 but attacks diagonally from there. This is why understanding pawn control is essential to recognizing tactics. The supporting d4 pawn also matters: the pawn fork is more convincing when the opponent cannot simply remove its source for free.",
+      "caution": "A central pawn advance can weaken squares or leave another piece hanging. The example isolates the fork so its mechanism is clear. In a full position, compare the material gained with every forcing response the advance allows.",
+      "remember": "A pawn advance can change two diagonal attacks at once.",
+      "number": 2,
+      "filename": "02-a-pawn-can-fork-two-pieces.html",
+      "fen": "7k/8/3n1b2/8/3PP3/8/8/K7 w - - 0 1",
+      "steps": [
+        {
+          "san": "e5",
+          "uci": "e4e5",
+          "note": "The pawn advances with attacks on both Black minor pieces.",
+          "side": "w",
+          "moveNumber": 1,
+          "fen": "7k/8/3n1b2/4P3/3P4/8/8/K7 b - - 0 1"
+        },
+        {
+          "san": "Be7",
+          "uci": "f6e7",
+          "note": "Black saves the bishop in the illustrated line.",
+          "side": "b",
+          "moveNumber": 1,
+          "fen": "7k/4b3/3n4/4P3/3P4/8/8/K7 w - - 1 2"
+        },
+        {
+          "san": "exd6",
+          "uci": "e5d6",
+          "note": "White’s pawn captures the knight on d6.",
+          "side": "w",
+          "moveNumber": 2,
+          "fen": "7k/4b3/3P4/8/3P4/8/8/K7 b - - 0 2"
+        }
+      ],
+      "finalFen": "7k/4b3/3P4/8/3P4/8/8/K7 b - - 0 2",
+      "checkmate": false,
+      "stalemate": false,
+      "wordCount": 177
+    },
+    {
+      "title": "An absolute pin limits legal movement",
+      "lead": "A piece pinned to its king cannot expose that king.",
+      "read": "White’s rook on e1 points through the knight on e7 toward the Black king on e8. The knight cannot leave the e-file while that would expose a rook check. White’s bishop on g5 also attacks e7 along f6.",
+      "explain": "Two relationships make the capture work. The rook creates the pin, and the bishop supports the capture square. A pin alone would not justify sacrificing a rook for a knight. Here the Black king cannot recapture, so the supporting bishop changes the material result.",
+      "caution": "A pinned sliding piece may sometimes move along the pinning line while continuing to shield its king. A pinned piece may also capture the pinning attacker if that ends the danger. “Pinned” does not always mean completely immobile; it means that king safety restricts the legal options.",
+      "remember": "Identify what creates the pin and what protects the eventual capture square.",
+      "number": 3,
+      "filename": "03-an-absolute-pin-limits-legal-movement.html",
+      "fen": "4k3/4n3/8/6B1/8/8/8/K3R3 w - - 0 1",
+      "steps": [
+        {
+          "san": "Rxe7+",
+          "uci": "e1e7",
+          "note": "White captures the pinned knight. The bishop protects the rook’s destination.",
+          "side": "w",
+          "moveNumber": 1,
+          "fen": "4k3/4R3/8/6B1/8/8/8/K7 b - - 0 1"
+        },
+        {
+          "san": "Kf8",
+          "uci": "e8f8",
+          "note": "Black moves the king away; Kxe7 would be illegal because the bishop attacks e7.",
+          "side": "b",
+          "moveNumber": 1,
+          "fen": "5k2/4R3/8/6B1/8/8/8/K7 w - - 1 2"
+        }
+      ],
+      "finalFen": "5k2/4R3/8/6B1/8/8/8/K7 w - - 1 2",
+      "checkmate": false,
+      "stalemate": false,
+      "wordCount": 182
+    },
+    {
+      "title": "A relative pin can be broken with a forcing move",
+      "lead": "A queen behind a piece does not make that piece legally immobile.",
+      "read": "White’s rook on d1 attacks up the d-file. Black’s bishop on d5 stands between that rook and the queen on d8. Moving the bishop normally exposes the queen, but Black can move it with check.",
+      "explain": "The sequence illustrates why a relative pin is a tactical condition rather than a legal prohibition. The bishop was pinned to a queen, not a king. Its checking move gave Black time to address the rook’s attack. In the shown exchange, Black gives up a bishop and takes a pawn and rook.",
+      "caution": "White has other ways to respond to the check, and a full decision requires comparing them. The central lesson survives those alternatives: a piece apparently tied to a valuable target may escape its duties by creating a stronger immediate threat.",
+      "remember": "Before trusting a relative pin, inspect forcing moves by the pinned piece.",
+      "number": 4,
+      "filename": "04-a-relative-pin-can-be-broken-with-a-forcing-move.html",
+      "fen": "3q3k/8/8/3b4/8/8/6P1/3R3K b - - 0 1",
+      "steps": [
+        {
+          "san": "Bxg2+",
+          "uci": "d5g2",
+          "note": "The bishop captures on g2 and checks the White king on h1.",
+          "side": "b",
+          "moveNumber": 1,
+          "fen": "3q3k/8/8/8/8/8/6b1/3R3K w - - 0 2"
+        },
+        {
+          "san": "Kxg2",
+          "uci": "h1g2",
+          "note": "White captures the bishop in this continuation.",
+          "side": "w",
+          "moveNumber": 2,
+          "fen": "3q3k/8/8/8/8/8/6K1/3R4 b - - 0 2"
+        },
+        {
+          "san": "Qxd1",
+          "uci": "d8d1",
+          "note": "Black’s queen captures the rook on the cleared d-file.",
+          "side": "b",
+          "moveNumber": 2,
+          "fen": "7k/8/8/8/8/8/6K1/3q4 w - - 0 3"
+        }
+      ],
+      "finalFen": "7k/8/8/8/8/8/6K1/3q4 w - - 0 3",
+      "checkmate": false,
+      "stalemate": false,
+      "wordCount": 189
+    },
+    {
+      "title": "A skewer attacks the front piece to reach the one behind",
+      "lead": "A king and queen on the same line can become a tactical liability.",
+      "read": "Black’s king and queen share the d-file. White’s rook can enter that file from b1. The king stands in front of the queen from the rook’s viewpoint, so a rook check can force the king to leave the line.",
+      "explain": "A skewer reverses the usual visual order of a pin. In a pin, a less valuable piece is in front of a valuable target. In this skewer, the king in front must escape, exposing the queen behind it. The rook’s long-range movement makes the newly opened file decisive.",
+      "caution": "A king may sometimes move to a square that continues protecting the rear piece, or the defender may block the checking line with another piece. The sparse diagram removes those distractions so the line-opening mechanism is easy to see.",
+      "remember": "Look beyond the checked piece for a second target on the same line.",
+      "number": 5,
+      "filename": "05-a-skewer-attacks-the-front-piece-to-reach-the-one-behind.html",
+      "fen": "3q4/8/8/8/3k4/8/8/KR6 w - - 0 1",
+      "steps": [
+        {
+          "san": "Rd1+",
+          "uci": "b1d1",
+          "note": "White checks along the d-file.",
+          "side": "w",
+          "moveNumber": 1,
+          "fen": "3q4/8/8/8/3k4/8/8/K2R4 b - - 1 1"
+        },
+        {
+          "san": "Ke5",
+          "uci": "d4e5",
+          "note": "The king steps away in the illustrated continuation.",
+          "side": "b",
+          "moveNumber": 1,
+          "fen": "3q4/8/8/4k3/8/8/8/K2R4 w - - 2 2"
+        },
+        {
+          "san": "Rxd8",
+          "uci": "d1d8",
+          "note": "With the line clear, White captures the queen.",
+          "side": "w",
+          "moveNumber": 2,
+          "fen": "3R4/8/8/4k3/8/8/8/K7 b - - 0 2"
+        }
+      ],
+      "finalFen": "3R4/8/8/4k3/8/8/8/K7 b - - 0 2",
+      "checkmate": false,
+      "stalemate": false,
+      "wordCount": 184
+    },
+    {
+      "title": "A discovered attack gives a line back to another piece",
+      "lead": "Moving one piece can activate a second attacker.",
+      "read": "White’s bishop on e2 blocks the rook on e1. Black’s queen stands farther up the same file on e7. The bishop can leave the file with a check, so its move gives Black an immediate king problem while uncovering the rook’s attack.",
+      "explain": "The moving bishop and the stationary rook do different jobs. The bishop supplies the check; the rook supplies the discovered attack. Seeing both jobs prevents the common mistake of looking only at the piece that physically moved.",
+      "caution": "A displayed line is one continuation, not proof that every reply is forced. A defender may be able to interpose a piece or answer both threats at once. After identifying the mechanism, examine the opponent’s available blocks and captures before declaring a particular material result inevitable.",
+      "remember": "When a piece moves, inspect the line it leaves behind.",
+      "number": 6,
+      "filename": "06-a-discovered-attack-gives-a-line-back-to-another-piece.html",
+      "fen": "6k1/4q3/8/8/8/8/4B3/4R1K1 w - - 0 1",
+      "steps": [
+        {
+          "san": "Bc4+",
+          "uci": "e2c4",
+          "note": "The bishop checks along c4–d5–e6–f7–g8 and uncovers the e-file.",
+          "side": "w",
+          "moveNumber": 1,
+          "fen": "6k1/4q3/8/8/2B5/8/8/4R1K1 b - - 1 1"
+        },
+        {
+          "san": "Kh8",
+          "uci": "g8h8",
+          "note": "Black moves the king in this illustrative line.",
+          "side": "b",
+          "moveNumber": 1,
+          "fen": "7k/4q3/8/8/2B5/8/8/4R1K1 w - - 2 2"
+        },
+        {
+          "san": "Rxe7",
+          "uci": "e1e7",
+          "note": "White’s rook takes the queen on the newly opened file.",
+          "side": "w",
+          "moveNumber": 2,
+          "fen": "7k/4R3/8/8/2B5/8/8/6K1 b - - 0 2"
+        }
+      ],
+      "finalFen": "7k/4R3/8/8/2B5/8/8/6K1 b - - 0 2",
+      "checkmate": false,
+      "stalemate": true,
+      "wordCount": 180
+    },
+    {
+      "title": "Double check requires a king move",
+      "lead": "Two simultaneous checks cannot be answered by blocking just one line.",
+      "read": "The e2 bishop blocks White’s rook on the e-file. The bishop can move to b5, where its diagonal also reaches e8. That single move creates two attacks on the Black king: one from the rook and one from the bishop.",
+      "explain": "Black cannot solve this position by merely blocking the e-file, because the bishop would still check. Capturing the bishop with another piece would not remove the rook’s check either. A legal response must move the king away from both attacks; that king move may include a legal capture if one is available.",
+      "caution": "Double check is powerful, but it is not automatically checkmate. The final diagram shows a legal escape in this example. Check the king’s actual destinations and the attacks that remain after it moves. The notation may use a single + even though two pieces are checking.",
+      "remember": "Two checks at once focus the calculation on legal king moves.",
+      "number": 7,
+      "filename": "07-double-check-requires-a-king-move.html",
+      "fen": "1q2k3/8/8/8/8/8/4B3/K3R3 w - - 0 1",
+      "steps": [
+        {
+          "san": "Bb5+",
+          "uci": "e2b5",
+          "note": "The bishop checks diagonally while uncovering the rook’s file check.",
+          "side": "w",
+          "moveNumber": 1,
+          "fen": "1q2k3/8/8/1B6/8/8/8/K3R3 b - - 1 1"
+        },
+        {
+          "san": "Kf7",
+          "uci": "e8f7",
+          "note": "Black moves the king to a square outside both attacking lines.",
+          "side": "b",
+          "moveNumber": 1,
+          "fen": "1q6/5k2/8/1B6/8/8/8/K3R3 w - - 2 2"
+        }
+      ],
+      "finalFen": "1q6/5k2/8/1B6/8/8/8/K3R3 w - - 2 2",
+      "checkmate": false,
+      "stalemate": false,
+      "wordCount": 187
+    },
+    {
+      "title": "Remove the defender before taking its target",
+      "lead": "A protecting piece can be the real tactical target.",
+      "read": "The Black knight on d5 protects the queen on f6. White’s queen already attacks f6, but an immediate queen exchange would allow the knight to recapture. White’s bishop can first capture that defender with check.",
+      "explain": "The order of operations matters. The first capture changes the protection of a different square. This is a useful way to read tactical combinations: name the defender, remove or distract it, and only then inspect the newly vulnerable target. The check gives the first move extra force.",
+      "caution": "Black can consider other responses to the bishop check, including queen interpositions. The displayed line explains the removal mechanism; it does not claim that the king move is Black’s only legal response. Always continue the analysis when a defender can answer two threats with one move.",
+      "remember": "Before capturing a target, identify the piece that makes that capture unattractive.",
+      "number": 8,
+      "filename": "08-remove-the-defender-before-taking-its-target.html",
+      "fen": "6k1/8/5q2/3n4/2B5/5Q2/8/6K1 w - - 0 1",
+      "steps": [
+        {
+          "san": "Bxd5+",
+          "uci": "c4d5",
+          "note": "The bishop removes the knight and checks along d5–e6–f7–g8.",
+          "side": "w",
+          "moveNumber": 1,
+          "fen": "6k1/8/5q2/3B4/8/5Q2/8/6K1 b - - 0 1"
+        },
+        {
+          "san": "Kh8",
+          "uci": "g8h8",
+          "note": "Black moves the king in the displayed continuation.",
+          "side": "b",
+          "moveNumber": 1,
+          "fen": "7k/8/5q2/3B4/8/5Q2/8/6K1 w - - 1 2"
+        },
+        {
+          "san": "Qxf6+",
+          "uci": "f3f6",
+          "note": "White captures the now-unguarded queen and checks on the long diagonal.",
+          "side": "w",
+          "moveNumber": 2,
+          "fen": "7k/8/5Q2/3B4/8/8/8/6K1 b - - 0 2"
+        }
+      ],
+      "finalFen": "7k/8/5Q2/3B4/8/8/8/6K1 b - - 0 2",
+      "checkmate": false,
+      "stalemate": false,
+      "wordCount": 184
+    },
+    {
+      "title": "A back-rank trap is a shortage of exits",
+      "lead": "An open file can turn a pawn shelter into a cage.",
+      "read": "Black’s king is hemmed in by its own pawns. White’s rook can travel up the open d-file. Once the rook reaches d8, it attacks the whole eighth rank, including the king’s sideways escape squares.",
+      "explain": "The three pawns are normally a shelter, but here they prevent the king from leaving the back rank. The rook controls f8 and h8; the pawns occupy f7, g7, and h7. Identifying every exit turns a familiar mating picture into a complete explanation.",
+      "caution": "An escape square is useful only if the king can legally reach it. A pawn move may create space but also open a different attack. Likewise, a defender able to block or capture the invading rook can change the outcome even when the king has no flight square.",
+      "remember": "For a back-rank attack, inspect both the invading line and the king’s exits.",
+      "number": 9,
+      "filename": "09-a-back-rank-trap-is-a-shortage-of-exits.html",
+      "fen": "6k1/5ppp/8/8/8/8/5PPP/3R2K1 w - - 0 1",
+      "steps": [
+        {
+          "san": "Rd8#",
+          "uci": "d1d8",
+          "note": "The rook checks along the eighth rank. Black has no piece to capture it or block the line.",
+          "side": "w",
+          "moveNumber": 1,
+          "fen": "3R2k1/5ppp/8/8/8/8/5PPP/6K1 b - - 1 1"
+        }
+      ],
+      "finalFen": "3R2k1/5ppp/8/8/8/8/5PPP/6K1 b - - 1 1",
+      "checkmate": true,
+      "stalemate": false,
+      "wordCount": 175
+    },
+    {
+      "title": "A protected queen can mate next to the king",
+      "lead": "The queen supplies the check, while a second piece makes it untouchable.",
+      "read": "White’s king on f7 protects g7. The queen can move from g6 to g7, checking the Black king on h8 from an adjacent diagonal. The protecting king is the reason Black cannot capture that queen.",
+      "explain": "The mating arrangement has three parts: a checking piece, coverage of the escape squares, and protection of the checking piece. The queen performs the first two jobs; the king performs the third. Adjacent queen mates often become easy to understand once these responsibilities are separated.",
+      "caution": "A queen placed next to the enemy king without support may simply be captured. Do not treat proximity as strength by itself. If the supporting piece is pinned or its line is blocked, the intended queen protection may also fail.",
+      "remember": "For a close queen check, verify who protects the queen’s square.",
+      "number": 10,
+      "filename": "10-a-protected-queen-can-mate-next-to-the-king.html",
+      "fen": "7k/5K2/6Q1/8/8/8/8/8 w - - 0 1",
+      "steps": [
+        {
+          "san": "Qg7#",
+          "uci": "g6g7",
+          "note": "The queen checks h8 and covers g8 and h7. White’s king protects g7.",
+          "side": "w",
+          "moveNumber": 1,
+          "fen": "7k/5KQ1/8/8/8/8/8/8 b - - 1 1"
+        }
+      ],
+      "finalFen": "7k/5KQ1/8/8/8/8/8/8 b - - 1 1",
+      "checkmate": true,
+      "stalemate": false,
+      "wordCount": 165
+    },
+    {
+      "title": "A smothered king cannot answer a knight check",
+      "lead": "Friendly pieces can block every escape without blocking a knight.",
+      "read": "Black’s king on h8 is boxed in by the rook on g8 and pawns on g7 and h7. White’s knight can jump to f7, where it attacks h8. No piece can interpose between a knight and the square it attacks.",
+      "explain": "This is the core shape of a smothered mate. The king’s own pieces supply the confinement, while the knight ignores their intervening presence. The rook is physically close to the king, but it cannot capture a knight on f7 from g8 or block a knight attack.",
+      "caution": "The same knight check would not be mate if Black had a safe escape or a piece that could capture f7. The term “smothered” describes a mating mechanism; it does not replace the normal check of captures and legal king moves.",
+      "remember": "A wall of friendly pieces does not protect a king from a knight’s jump.",
+      "number": 11,
+      "filename": "11-a-smothered-king-cannot-answer-a-knight-check.html",
+      "fen": "6rk/6pp/8/4N3/8/8/8/K7 w - - 0 1",
+      "steps": [
+        {
+          "san": "Nf7#",
+          "uci": "e5f7",
+          "note": "The knight checks h8. Black cannot capture it, and every neighboring king square is occupied by a friendly piece.",
+          "side": "w",
+          "moveNumber": 1,
+          "fen": "6rk/5Npp/8/8/8/8/8/K7 b - - 1 1"
+        }
+      ],
+      "finalFen": "6rk/5Npp/8/8/8/8/8/K7 b - - 1 1",
+      "checkmate": true,
+      "stalemate": false,
+      "wordCount": 178
+    },
+    {
+      "title": "Two attackers can make a pawn an entry square",
+      "lead": "A pawn next to the king may be the gateway to mate.",
+      "read": "White’s queen on h5 and bishop on c4 both attack f7. Black’s king protects that pawn, but capturing on f7 would place the king on a square attacked by the bishop. The rook on h8 also occupies a possible escape square.",
+      "explain": "The final diagram explains the mate square by square. The queen covers f8 and g8; Black’s own pawns occupy g7 and h7, and the rook occupies h8. The king cannot capture f7 because the c4 bishop defends it. No Black piece can capture the queen or interpose against the adjacent check.",
+      "caution": "Counting attackers is only the beginning. The geometry of the king’s escapes and the legality of its captures decide whether the attack is mate. If h8 were empty in this reduced position, the king would have an escape and the result would differ.",
+      "remember": "Combine target protection, capture legality, and escape-square coverage.",
+      "number": 12,
+      "filename": "12-two-attackers-can-make-a-pawn-an-entry-square.html",
+      "fen": "6kr/5ppp/8/7Q/2B5/8/8/6K1 w - - 0 1",
+      "steps": [
+        {
+          "san": "Qxf7#",
+          "uci": "h5f7",
+          "note": "The queen captures the pawn, checks the king, and is protected by the bishop.",
+          "side": "w",
+          "moveNumber": 1,
+          "fen": "6kr/5Qpp/8/8/2B5/8/8/6K1 b - - 0 1"
+        }
+      ],
+      "finalFen": "6kr/5Qpp/8/8/2B5/8/8/6K1 b - - 0 1",
+      "checkmate": true,
+      "stalemate": false,
+      "wordCount": 178
+    },
+    {
+      "title": "A knight promotion can create an immediate fork",
+      "lead": "The best promotion idea sometimes comes from the new piece’s movement.",
+      "read": "White’s c7 pawn is ready to promote. A knight on c8 would attack both e7 and b6, the squares occupied by Black’s king and queen. The promotion therefore has a tactical purpose beyond simply choosing a powerful piece.",
+      "explain": "Promotion takes effect immediately, so the fork exists on the promotion move itself. A queen and a knight attack different sets of squares; the knight’s special geometry explains this choice. The example illustrates an underpromotion mechanism, rather than claiming that a queen promotion must always be inferior in every superficially similar position.",
+      "caution": "Compare the available promotion choices in the actual position. A different placement of the enemy king or queen can remove the fork, permit a capture of the new knight, or give a queen promotion a faster win.",
+      "remember": "Choose the promoted piece for the job the position requires.",
+      "number": 13,
+      "filename": "13-a-knight-promotion-can-create-an-immediate-fork.html",
+      "fen": "8/2P1k3/1q6/8/8/8/8/K7 w - - 0 1",
+      "steps": [
+        {
+          "san": "c8=N+",
+          "uci": "c7c8n",
+          "note": "White promotes with check and a knight attack on the queen.",
+          "side": "w",
+          "moveNumber": 1,
+          "fen": "2N5/4k3/1q6/8/8/8/8/K7 b - - 0 1"
+        },
+        {
+          "san": "Kd7",
+          "uci": "e7d7",
+          "note": "Black moves the king in the displayed line.",
+          "side": "b",
+          "moveNumber": 1,
+          "fen": "2N5/3k4/1q6/8/8/8/8/K7 w - - 1 2"
+        },
+        {
+          "san": "Nxb6+",
+          "uci": "c8b6",
+          "note": "The newly created knight captures the queen and checks again.",
+          "side": "w",
+          "moveNumber": 2,
+          "fen": "8/3k4/1N6/8/8/8/8/K7 b - - 0 2"
+        }
+      ],
+      "finalFen": "8/3k4/1N6/8/8/8/8/K7 b - - 0 2",
+      "checkmate": false,
+      "stalemate": false,
+      "wordCount": 185
+    },
+    {
+      "title": "Stalemate is a tactical resource for the defender",
+      "lead": "Material advantage does not override the rule about legal moves.",
+      "read": "Black has only a king. White’s king already controls g7 and h7, while the queen can remove additional escape squares. This makes a careless quiet move dangerous for White: it can leave Black with no legal move without giving check.",
+      "explain": "The defender receives a draw immediately. From White’s perspective, the error is failing to distinguish confinement from mate. From a defender’s perspective, reducing the position to a stalemate pattern can be a practical final resource when material has been lost.",
+      "caution": "Stalemate cannot be claimed merely because the king has no move if another Black piece or pawn can still move legally. It also does not apply when the king is in check; with no response to a check, the result is checkmate instead.",
+      "remember": "When only a king remains, count its legal moves before a quiet move.",
+      "number": 14,
+      "filename": "14-stalemate-is-a-tactical-resource-for-the-defender.html",
+      "fen": "7k/4Q3/6K1/8/8/8/8/8 w - - 0 1",
+      "steps": [
+        {
+          "san": "Qf7",
+          "uci": "e7f7",
+          "note": "White’s queen covers g8 but does not check h8. Black has no legal move, so the position is stalemate.",
+          "side": "w",
+          "moveNumber": 1,
+          "fen": "7k/5Q2/6K1/8/8/8/8/8 b - - 1 1"
+        }
+      ],
+      "finalFen": "7k/5Q2/6K1/8/8/8/8/8 b - - 1 1",
+      "checkmate": false,
+      "stalemate": true,
+      "wordCount": 173
+    },
+    {
+      "title": "Winning the exchange means a rook for a minor piece",
+      "lead": "A tactical gain can survive the loss of the attacking piece.",
+      "read": "White’s knight can jump to f6 with check. From f6 it also attacks d7, where Black’s rook stands. Black’s bishop on e6 can later capture the knight on d7, but that does not erase the difference in material traded.",
+      "explain": "White lost a knight and Black lost a rook. Using the usual rough values of three and five, White gained about two pawns’ worth of material. This is called winning the exchange. The final board matters more than the fact that White’s tactical piece was eventually captured.",
+      "caution": "Piece values are guides, not exact prices. A powerful bishop, trapped rook, mating attack, or unusual pawn structure can outweigh a nominal exchange advantage. First count the transaction correctly; then evaluate the activity and safety of the surviving pieces.",
+      "remember": "A captured attacker can still have completed a favorable trade.",
+      "number": 15,
+      "filename": "15-winning-the-exchange-means-a-rook-for-a-minor-piece.html",
+      "fen": "8/3r2pk/4b3/8/4N3/8/8/K7 w - - 0 1",
+      "steps": [
+        {
+          "san": "Nf6+",
+          "uci": "e4f6",
+          "note": "The knight checks the king and forks the rook.",
+          "side": "w",
+          "moveNumber": 1,
+          "fen": "8/3r2pk/4bN2/8/8/8/8/K7 b - - 1 1"
+        },
+        {
+          "san": "Kh8",
+          "uci": "h7h8",
+          "note": "Black moves the king out of check.",
+          "side": "b",
+          "moveNumber": 1,
+          "fen": "7k/3r2p1/4bN2/8/8/8/8/K7 w - - 2 2"
+        },
+        {
+          "san": "Nxd7",
+          "uci": "f6d7",
+          "note": "White captures the rook.",
+          "side": "w",
+          "moveNumber": 2,
+          "fen": "7k/3N2p1/4b3/8/8/8/8/K7 b - - 0 2"
+        },
+        {
+          "san": "Bxd7",
+          "uci": "e6d7",
+          "note": "Black recaptures the knight with the bishop.",
+          "side": "b",
+          "moveNumber": 2,
+          "fen": "7k/3b2p1/8/8/8/8/8/K7 w - - 0 3"
+        }
+      ],
+      "finalFen": "7k/3b2p1/8/8/8/8/8/K7 w - - 0 3",
+      "checkmate": false,
+      "stalemate": false,
+      "wordCount": 183
+    },
+    {
+      "title": "A material capture can lose to an immediate mate",
+      "lead": "The opponent’s forcing reply belongs in the calculation.",
+      "read": "White’s rook attacks the Black rook on a7. On the other wing, Black’s queen and bishop cooperate against h2. The bishop on c7 protects h2 along d6, e5, f4, and g3.",
+      "explain": "The first capture gains a rook on the ledger but loses the game. The missing step was checking Black’s forcing reply before committing to the capture. In the final position, White’s king cannot take the queen because of the bishop, and g1 and g2 are covered by the queen.",
+      "caution": "The lesson does not prescribe one universal defensive move for every similar position. It establishes the order of attention: inspect checks, captures, and direct mating threats before accepting a material opportunity. A threat against the king can matter more than the largest visible loose piece.",
+      "remember": "Calculate the opponent’s next forcing move before celebrating your capture.",
+      "number": 16,
+      "filename": "16-a-material-capture-can-lose-to-an-immediate-mate.html",
+      "fen": "6k1/r1b5/8/8/7q/8/6PP/R6K w - - 0 1",
+      "steps": [
+        {
+          "san": "Rxa7",
+          "uci": "a1a7",
+          "note": "White takes the rook, concentrating on material.",
+          "side": "w",
+          "moveNumber": 1,
+          "fen": "6k1/R1b5/8/8/7q/8/6PP/7K b - - 0 1"
+        },
+        {
+          "san": "Qxh2#",
+          "uci": "h4h2",
+          "note": "Black captures on h2 with mate. The bishop protects the queen, and the queen covers the king’s escapes.",
+          "side": "b",
+          "moveNumber": 1,
+          "fen": "6k1/R1b5/8/8/8/8/6Pq/7K w - - 0 2"
+        }
+      ],
+      "finalFen": "6k1/R1b5/8/8/8/8/6Pq/7K w - - 0 2",
+      "checkmate": true,
+      "stalemate": false,
+      "wordCount": 177
+    }
+  ],
+  "repo": "chess17",
+  "series": [
+    {
+      "repo": "chess15",
+      "title": "Chess, Clearly"
+    },
+    {
+      "repo": "chess16",
+      "title": "Openings, Explained"
+    },
+    {
+      "repo": "chess17",
+      "title": "Tactics, Made Visible"
+    },
+    {
+      "repo": "chess18",
+      "title": "Endgames, Step by Step"
+    }
+  ]
+}

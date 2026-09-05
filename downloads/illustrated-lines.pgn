@@ -1,0 +1,191 @@
+[Event "Tactics, Made Visible: lesson 1"]
+[Site "https://knightway8.github.io/chess17/lessons/01-a-knight-fork-creates-two-threats-at-once.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3q3k/6p1/8/4N3/8/8/8/K7 w - - 0 1"]
+
+1. Nf7+ { The knight checks the king and attacks the queen. } 1... Kh7 { In this continuation, Black moves the king out of check. } 2. Nxd8 { White captures the queen on the next move. } *
+
+[Event "Tactics, Made Visible: lesson 2"]
+[Site "https://knightway8.github.io/chess17/lessons/02-a-pawn-can-fork-two-pieces.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/8/3n1b2/8/3PP3/8/8/K7 w - - 0 1"]
+
+1. e5 { The pawn advances with attacks on both Black minor pieces. } 1... Be7 { Black saves the bishop in the illustrated line. } 2. exd6 { White’s pawn captures the knight on d6. } *
+
+[Event "Tactics, Made Visible: lesson 3"]
+[Site "https://knightway8.github.io/chess17/lessons/03-an-absolute-pin-limits-legal-movement.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4k3/4n3/8/6B1/8/8/8/K3R3 w - - 0 1"]
+
+1. Rxe7+ { White captures the pinned knight. The bishop protects the rook’s destination. } 1... Kf8 { Black moves the king away; Kxe7 would be illegal because the bishop attacks e7. } *
+
+[Event "Tactics, Made Visible: lesson 4"]
+[Site "https://knightway8.github.io/chess17/lessons/04-a-relative-pin-can-be-broken-with-a-forcing-move.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3q3k/8/8/3b4/8/8/6P1/3R3K b - - 0 1"]
+
+1... Bxg2+ { The bishop captures on g2 and checks the White king on h1. } 2. Kxg2 { White captures the bishop in this continuation. } 2... Qxd1 { Black’s queen captures the rook on the cleared d-file. } *
+
+[Event "Tactics, Made Visible: lesson 5"]
+[Site "https://knightway8.github.io/chess17/lessons/05-a-skewer-attacks-the-front-piece-to-reach-the-one-behind.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3q4/8/8/8/3k4/8/8/KR6 w - - 0 1"]
+
+1. Rd1+ { White checks along the d-file. } 1... Ke5 { The king steps away in the illustrated continuation. } 2. Rxd8 { With the line clear, White captures the queen. } *
+
+[Event "Tactics, Made Visible: lesson 6"]
+[Site "https://knightway8.github.io/chess17/lessons/06-a-discovered-attack-gives-a-line-back-to-another-piece.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "1/2-1/2"]
+[SetUp "1"]
+[FEN "6k1/4q3/8/8/8/8/4B3/4R1K1 w - - 0 1"]
+
+1. Bc4+ { The bishop checks along c4–d5–e6–f7–g8 and uncovers the e-file. } 1... Kh8 { Black moves the king in this illustrative line. } 2. Rxe7 { White’s rook takes the queen on the newly opened file. } 1/2-1/2
+
+[Event "Tactics, Made Visible: lesson 7"]
+[Site "https://knightway8.github.io/chess17/lessons/07-double-check-requires-a-king-move.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1q2k3/8/8/8/8/8/4B3/K3R3 w - - 0 1"]
+
+1. Bb5+ { The bishop checks diagonally while uncovering the rook’s file check. } 1... Kf7 { Black moves the king to a square outside both attacking lines. } *
+
+[Event "Tactics, Made Visible: lesson 8"]
+[Site "https://knightway8.github.io/chess17/lessons/08-remove-the-defender-before-taking-its-target.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/8/5q2/3n4/2B5/5Q2/8/6K1 w - - 0 1"]
+
+1. Bxd5+ { The bishop removes the knight and checks along d5–e6–f7–g8. } 1... Kh8 { Black moves the king in the displayed continuation. } 2. Qxf6+ { White captures the now-unguarded queen and checks on the long diagonal. } *
+
+[Event "Tactics, Made Visible: lesson 9"]
+[Site "https://knightway8.github.io/chess17/lessons/09-a-back-rank-trap-is-a-shortage-of-exits.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "1-0"]
+[SetUp "1"]
+[FEN "6k1/5ppp/8/8/8/8/5PPP/3R2K1 w - - 0 1"]
+
+1. Rd8# { The rook checks along the eighth rank. Black has no piece to capture it or block the line. } 1-0
+
+[Event "Tactics, Made Visible: lesson 10"]
+[Site "https://knightway8.github.io/chess17/lessons/10-a-protected-queen-can-mate-next-to-the-king.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "1-0"]
+[SetUp "1"]
+[FEN "7k/5K2/6Q1/8/8/8/8/8 w - - 0 1"]
+
+1. Qg7# { The queen checks h8 and covers g8 and h7. White’s king protects g7. } 1-0
+
+[Event "Tactics, Made Visible: lesson 11"]
+[Site "https://knightway8.github.io/chess17/lessons/11-a-smothered-king-cannot-answer-a-knight-check.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "1-0"]
+[SetUp "1"]
+[FEN "6rk/6pp/8/4N3/8/8/8/K7 w - - 0 1"]
+
+1. Nf7# { The knight checks h8. Black cannot capture it, and every neighboring king square is occupied by a friendly piece. } 1-0
+
+[Event "Tactics, Made Visible: lesson 12"]
+[Site "https://knightway8.github.io/chess17/lessons/12-two-attackers-can-make-a-pawn-an-entry-square.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "1-0"]
+[SetUp "1"]
+[FEN "6kr/5ppp/8/7Q/2B5/8/8/6K1 w - - 0 1"]
+
+1. Qxf7# { The queen captures the pawn, checks the king, and is protected by the bishop. } 1-0
+
+[Event "Tactics, Made Visible: lesson 13"]
+[Site "https://knightway8.github.io/chess17/lessons/13-a-knight-promotion-can-create-an-immediate-fork.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2P1k3/1q6/8/8/8/8/K7 w - - 0 1"]
+
+1. c8=N+ { White promotes with check and a knight attack on the queen. } 1... Kd7 { Black moves the king in the displayed line. } 2. Nxb6+ { The newly created knight captures the queen and checks again. } *
+
+[Event "Tactics, Made Visible: lesson 14"]
+[Site "https://knightway8.github.io/chess17/lessons/14-stalemate-is-a-tactical-resource-for-the-defender.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "1/2-1/2"]
+[SetUp "1"]
+[FEN "7k/4Q3/6K1/8/8/8/8/8 w - - 0 1"]
+
+1. Qf7 { White’s queen covers g8 but does not check h8. Black has no legal move, so the position is stalemate. } 1/2-1/2
+
+[Event "Tactics, Made Visible: lesson 15"]
+[Site "https://knightway8.github.io/chess17/lessons/15-winning-the-exchange-means-a-rook-for-a-minor-piece.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3r2pk/4b3/8/4N3/8/8/K7 w - - 0 1"]
+
+1. Nf6+ { The knight checks the king and forks the rook. } 1... Kh8 { Black moves the king out of check. } 2. Nxd7 { White captures the rook. } 2... Bxd7 { Black recaptures the knight with the bishop. } *
+
+[Event "Tactics, Made Visible: lesson 16"]
+[Site "https://knightway8.github.io/chess17/lessons/16-a-material-capture-can-lose-to-an-immediate-mate.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "0-1"]
+[SetUp "1"]
+[FEN "6k1/r1b5/8/8/7q/8/6PP/R6K w - - 0 1"]
+
+1. Rxa7 { White takes the rook, concentrating on material. } 1... Qxh2# { Black captures on h2 with mate. The bishop protects the queen, and the queen covers the king’s escapes. } 0-1
